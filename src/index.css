@@ -1,4 +1,28 @@
+@import url('https://fonts.cdnfonts.com/css/pokemon-solid');
+
 body {
     /* background-image: url('./assets/pokemon.webp'); */
     background-size: cover;
+}
+nav {
+    font-family: 'Pokemon Solid', sans-serif;
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+}
+.nav-menu-ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 60%;
+}
+.nav-menu-ul a {
+    text-decoration: none;
+    color: black;
+    letter-spacing: 2px;
+}
+.logo {
+    height: 50px;
+    width: 50px;
 }
