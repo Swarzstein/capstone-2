@@ -4,11 +4,20 @@ body {
     /* background-image: url('./assets/pokemon.webp'); */
     background-size: cover;
 }
+
+header {
+    position: sticky;
+    background-color: #fff;
+    top: 0px;
+}
+
 nav {
     font-family: 'Pokemon Solid', sans-serif;
     display: flex;
     justify-content: space-around;
-    padding: 2rem;
+    align-items: center;
+    padding: 0 2rem;
+
 }
 .nav-menu-ul{
     list-style: none;
@@ -19,10 +28,14 @@ nav {
 }
 .nav-menu-ul a {
     text-decoration: none;
-    color: black;
+    color: #ed1b24;
     letter-spacing: 2px;
 }
 .logo {
     height: 50px;
     width: 50px;
+}
+
+footer {
+    padding: 5%;
 }
