@@ -1,5 +1,5 @@
 /* eslint-disable no-new */
-const cardPoke = document.querySelector('.card');
+const cardPoke = document.querySelector('.cardModal');
 const $grafica = document.querySelector('#grafica');
 const etiquetas = [];
 const datas = [];
@@ -14,9 +14,9 @@ const displayPokemon = (array1) => {
     <h2>${card.name.toUpperCase()}</h2>
     `;
     // eslint-disable-next-line no-restricted-syntax
-    for (const i of card.abilities) {
+    for (const abilityOne of card.abilities) {
       cardPoke.innerHTML += `
-        <p>Ability Nro ${nroAbility + 1}:  ${i.ability.name}</p>`;
+        <p>Ability Nro ${nroAbility + 1}:  ${abilityOne.ability.name}</p>`;
       // eslint-disable-next-line no-new, no-undef
       nroAbility += 1;
     }

@@ -42,7 +42,7 @@ footer {
   padding: 5%;
 }
 
-.card {
+.cardModal {
   display: flex;
   flex-direction: column;
   align-items: center;
