@@ -9,7 +9,7 @@ body {
 header {
   position: sticky;
   background-color: #fff;
-  top: 0px;
+  top: 0;
 }
 
 nav {
@@ -20,7 +20,7 @@ nav {
   padding: 0 2rem;
 }
 
-.nav-menu-ul{
+.nav-menu-ul {
   list-style: none;
   display: flex;
   flex-direction: row;
@@ -61,7 +61,7 @@ footer {
 }
 
 .grass {
-  background-color: #6A6;
+  background-color: #6a6;
 }
 
 span {
