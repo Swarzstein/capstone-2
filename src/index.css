@@ -3,6 +3,7 @@
 body {
   background-image: url('./assets/pokemon.webp');
   background-size: cover;
+  margin: 0;
 }
 
 header {
@@ -57,4 +58,121 @@ main {
 
 footer {
   padding: 5%;
+}
+
+.grass {
+  background-color: #6a6;
+}
+
+span {
+  border: 1px solid #000;
+  border-radius: 0.5em;
+  padding: 2px 4px;
+}
+
+.card {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 2vh 7vh;
+  border-radius: 1em;
+  border: 1px solid #eee;
+  background-color: #eee;
+}
+
+.card * {
+  margin: 0;
+  padding: 0;
+}
+
+.card-img {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.poke-image {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.hidden {
+  display: none;
+}
+
+#pokemon-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+
+.cardModal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.cardModal img {
+    height: 15rem;
+}
+
+.comments {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid wheat;
+    margin-left: 10%;
+    margin-top: 2rem;
+    box-shadow: 8px 10px 10px 1px rgba(0,0,0,0.5);
+}
+
+.ul-form {
+    display: flex;
+    flex-direction: column;
+    width: 10vh;
+    gap: 20px;
+    justify-content: space-between;
+}
+.ul-form input {
+    border: solid black;
+    width: fit-content;
+}
+
+.btn {
+    border: solid black;
+    color:  white;
+    background-color: red;
+    height: 2rem;
+    width: max-content; 
+    font-size: 1rem;
+    box-sizing: border-box;
+    box-shadow: 8px 10px 10px 1px rgba(0,0,0,0.5);
+}
+
+#grafica{
+    width: 50rem;
+    padding: 0px;
+    margin-top: 2rem;
+}
+.cardTotal {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+}
+.modal {
+    justify-content: space-around;
+    border: solid wheat 3px;
+    box-shadow: 8px 10px 10px 1px rgba(0,0,0,0.5);
+    padding-right: 5rem;
+    margin-left: 15%;
+    margin-right: 15%;
 }
