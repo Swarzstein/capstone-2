@@ -1,41 +1,109 @@
 @import url('https://fonts.cdnfonts.com/css/pokemon-solid');
 
 body {
-    /* background-image: url('./assets/pokemon.webp'); */
-    background-size: cover;
+  background-image: url('./assets/pokemon.webp');
+  background-size: cover;
+  margin: 0;
 }
 
 header {
-    position: sticky;
-    background-color: #fff;
-    top: 0px;
+  position: sticky;
+  background-color: #fff;
+  top: 0;
 }
 
 nav {
-    font-family: 'Pokemon Solid', sans-serif;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 0 2rem;
+  font-family: 'Pokemon Solid', sans-serif;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 2rem;
+}
 
+.nav-menu-ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 60%;
 }
-.nav-menu-ul{
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 60%;
-}
+
 .nav-menu-ul a {
-    text-decoration: none;
-    color: #ed1b24;
-    letter-spacing: 2px;
+  text-decoration: none;
+  color: #ed1b24;
+  letter-spacing: 2px;
 }
+
 .logo {
-    height: 50px;
-    width: 50px;
+  height: 50px;
+  width: 50px;
+}
+
+main {
+  padding: 5%;
+}
+
+.buttons {
+  display: flex;
+  padding: 5% 0;
+  justify-content: center;
+  gap: 5%;
+}
+
+.buttons button {
+  min-width: 60%;
+  height: 5vh;
+  border-radius: 5px;
 }
 
 footer {
-    padding: 5%;
+  padding: 5%;
+}
+
+.grass {
+  background-color: #6a6;
+}
+
+span {
+  border: 1px solid #000;
+  border-radius: 0.5em;
+  padding: 2px 4px;
+}
+
+.card {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 2vh 7vh;
+  border-radius: 1em;
+  border: 1px solid #eee;
+  background-color: #eee;
+}
+
+.card * {
+  margin: 0;
+  padding: 0;
+}
+
+.card-img {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.poke-image {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.hidden {
+  display: none;
+}
+
+#pokemon-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
 }
