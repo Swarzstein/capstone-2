@@ -10,9 +10,7 @@ const displayPokemonList = async () => {
   for (const pokemon of pokemonList) {
     // eslint-disable-next-line no-await-in-loop
     pokemon.data = await getPokemon(pokemon.url);
-    console.log(pokemon.data.types);
     const types = pokemon.data.types.map((types) => `<span class="${types.type.name}">${types.type.name.toUpperCase()}</span>`).join('');
-    console.log(types);
     const name = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1);
     pokemonCards += `
     <div class="card" id="${n}">
@@ -29,7 +27,6 @@ const displayPokemonList = async () => {
     n += 1;
   }
   document.querySelector('#pokemon-list').innerHTML = pokemonCards;
-  //console.log(pokemonList);
 };
 
-export { displayPokemonList, pokemonList };
+export default displayPokemonList;
