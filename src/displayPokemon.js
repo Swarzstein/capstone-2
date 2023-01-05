@@ -1,27 +1,33 @@
+import { postComment, getComments } from '../modules/involvementRequests';
 /* eslint-disable no-new */
 const cardPoke = document.querySelector('.cardModal');
 const $grafica = document.querySelector('#grafica');
 let nroAbility = 0;
 let datosIngresos = {};
-const displayPokemon = (card) => {
+
+const nameInput = document.querySelector('.name-form');
+const messageInput = document.querySelector('.insights-form');
+const commentBtn = document.querySelector('#commentBtn');
+
+const displayPokemon = (card, index) => {
   const etiquetas = [];
   const datas = [];
   // eslint-disable-next-line no-undef
   cardPoke.innerHTML = '';
   cardPoke.innerHTML += `
     
-    <img src="${card.sprites.other['official-artwork'].front_default}" alt="pokemon">
-    <h2>${card.name.toUpperCase()}</h2>
+    <img src="${card[index].data.sprites.other['official-artwork'].front_default}" alt="pokemon">
+    <h2>${card[index].data.name.toUpperCase()}</h2>
     `;
   // eslint-disable-next-line no-restricted-syntax
-  for (const abilityOne of card.abilities) {
+  for (const abilityOne of card[index].data.abilities) {
     cardPoke.innerHTML += `
         <p>Ability Nro ${nroAbility + 1}:  ${abilityOne.ability.name}</p>`;
     // eslint-disable-next-line no-new, no-undef
     nroAbility += 1;
   }
   // eslint-disable-next-line no-restricted-syntax
-  for (const pokemonStat of card.stats) {
+  for (const pokemonStat of card[index].data.stats) {
     etiquetas.push(pokemonStat.stat.name);
     datas.push(pokemonStat.base_stat);
   }
@@ -65,6 +71,14 @@ const displayPokemon = (card) => {
     options,
   });
   // eslint-disable-next-line no-const-assign
+  commentBtn.addEventListener('click', async () => {
+    console.log(await postComment(1, 'nameInput.value', 'messageInput.value'));
+    // const a = await getComments();
+    // console.log(a);
+    nameInput.value = '';
+    nameInput.value = '';
+    // console.log(await getComments(1));
+  });
 };
 
 export default displayPokemon;

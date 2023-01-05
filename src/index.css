@@ -141,7 +141,7 @@ span {
     width: fit-content;
 }
 
-.btn {
+.commentBtn {
     border: solid black;
     color:  white;
     background-color: red;
