@@ -43,5 +43,4 @@ const displayPokemonList = async () => {
   });
 };
 
-// eslint-disable-next-line no-undef
 export default displayPokemonList;
