@@ -198,3 +198,9 @@ span {
   margin-top: 1rem;
   margin-right: 1rem;
 }
+
+.space-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
