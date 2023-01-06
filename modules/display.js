@@ -30,7 +30,7 @@ const displayPokemonList = async () => {
       <div class="buttons">
         <button class="popupBtn">Comments</button>
         <button class="hidden">Reserve</button>
-      </div>      
+      </div>
     </div>
     `;
     n += 1;
@@ -39,5 +39,4 @@ const displayPokemonList = async () => {
   localStorage.setItem('pokemonList', JSON.stringify(pokemonList));
   return pokemonCards;
 };
-
 export default displayPokemonList;

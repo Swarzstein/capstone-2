@@ -1,10 +1,11 @@
 import './index.css';
 import displayPokemonList from '../modules/display.js';
 import displayPokemon from './displayPokemon.js';
-import { likeToPokemon } from '../modules/likesManager';
+import { likeToPokemon } from '../modules/likesManager.js';
 
 const modalPopup = document.querySelector('.modalBackground');
 const closeBtn = document.querySelector('.close');
+
 closeBtn.addEventListener('click', () => {
   modalPopup.classList.toggle('hidden');
 });
@@ -16,14 +17,13 @@ const displayCards = async () => {
       modalPopup.classList.toggle('hidden');
       const arrayPokemon = JSON.parse(localStorage.getItem('pokemonList'));
       const index = parseInt(e.target.parentNode.parentNode.id, 10);
-      displayPokemon(arrayPokemon[index].data);
+      displayPokemon(arrayPokemon, index);
     });
   });
   document.querySelectorAll('.like-btn').forEach((likeButton) => {
     likeButton.addEventListener('click', (e) => {
       const id = parseInt(e.target.parentNode.id.slice(2), 10);
       likeToPokemon(id);
-      console.log(id);
     });
   });
 };
