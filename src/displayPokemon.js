@@ -3,13 +3,13 @@ import displayMessage from './displayMessage.js';
 /* eslint-disable no-new */
 const cardPoke = document.querySelector('.cardModal');
 const $grafica = document.querySelector('#grafica');
-let nroAbility = 0;
-let datosIngresos = {};
 
 const nameInput = document.querySelector('.name-form');
 const messageInput = document.querySelector('.insights-form');
 
 const displayPokemon = async (card, index) => {
+  let nroAbility = 0;
+  let datosIngresos = {};
   const etiquetas = [];
   const datas = [];
   // eslint-disable-next-line no-undef
