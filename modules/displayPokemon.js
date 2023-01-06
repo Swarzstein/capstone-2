@@ -72,16 +72,22 @@ const displayPokemon = async (card, index) => {
     },
     options,
   });
+
+  console.log('obteniendo comentarios');
   const a = await getComments(card[index].data.id);
+  console.log(`estos son los comentarios de ${card[index].data.id}:\n${JSON.stringify(a)}`);
   displayMessage(a);
   // eslint-disable-next-line no-const-assign
   document.querySelector('form').addEventListener('submit', async (e) => {
     e.preventDefault();
     // eslint-disable-next-line no-empty
     if (nameInput.value === '' || messageInput === '') {} else {
+      console.log(`añadiendo comentario al ${card[index].data.id}`);
       await postComment(card[index].data.id, nameInput.value, messageInput.value);
-      // console.log(await postComment(1, 'sadsfdd', 'asfsf'));
+      console.log(`comentario del ${card[index].data.id}`, card[index].data.id, nameInput.value, messageInput.value);
+      console.log(`obteniendo comentarios del ${card[index].data.id}`);
       const b = await getComments(card[index].data.id);
+      console.log(`estos son los comentarios de ${card[index].data.id}:\n${JSON.stringify(b)}`);
       // console.log('its:', b);
       // console.log('its me');
       displayMessage(b);

@@ -13,7 +13,9 @@ closeBtn.addEventListener('click', () => {
 const displayCards = async () => {
   document.querySelector('#pokemon-list').innerHTML = await displayPokemonList();
   document.querySelectorAll('.popupBtn').forEach((item) => {
+    console.log('añadiendo event listeners');
     item.addEventListener('click', (e) => {
+      
       modalPopup.classList.toggle('hidden');
       const arrayPokemon = JSON.parse(localStorage.getItem('pokemonList'));
       const index = parseInt(e.target.parentNode.parentNode.id, 10);
