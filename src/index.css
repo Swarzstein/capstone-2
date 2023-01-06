@@ -109,66 +109,70 @@ span {
 }
 
 .cardModal {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-left: 2rem;
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 2rem;
 }
+
 .cardModal img {
-    height: 15rem;
+  height: 15rem;
 }
 
 .comments {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: solid wheat;
-    margin-top: 2rem;
-    width: 90%;
-    box-shadow: 8px 10px 10px 1px rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: solid wheat;
+  margin-top: 2rem;
+  width: 90%;
+  box-shadow: 8px 10px 10px 1px rgba(0, 0, 0, 0.5);
 }
 
 .ul-form {
-    display: flex;
-    flex-direction: column;
-    width: 10vh;
-    gap: 20px;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  width: 10vh;
+  gap: 20px;
+  justify-content: space-between;
 }
+
 .ul-form input {
-    border: solid black;
-    width: fit-content;
+  border: solid black;
+  width: fit-content;
 }
 
 .btn {
-    border: solid black;
-    color:  white;
-    background-color: red;
-    height: 2rem;
-    width: max-content; 
-    font-size: 1rem;
-    box-sizing: border-box;
-    box-shadow: 8px 10px 10px 1px rgba(0,0,0,0.5);
+  border: solid black;
+  color: white;
+  background-color: red;
+  height: 2rem;
+  width: max-content;
+  font-size: 1rem;
+  box-sizing: border-box;
+  box-shadow: 8px 10px 10px 1px rgba(0, 0, 0, 0.5);
 }
 
-#grafica{
-    width: 50rem;
-    padding: 0px;
-    margin-top: 2rem;
+#grafica {
+  width: 50rem;
+  padding: 0;
+  margin-top: 2rem;
 }
+
 .cardTotal {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
 }
+
 .form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
 }
+
 .modal {
   display: flex;
   justify-content: space-around;
@@ -185,16 +189,24 @@ span {
   align-content: center;
   align-items: center;
 }
-.modalBackground{
+
+.modalBackground {
   width: 100vw;
   height: 100vh;
   position: fixed;
   background-color: #000d;
 }
+
 .close {
   background: none;
   border-style: none;
   align-self: flex-start;
   margin-top: 1rem;
   margin-right: 1rem;
+}
+
+.space-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
