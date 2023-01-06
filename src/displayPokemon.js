@@ -8,7 +8,6 @@ let datosIngresos = {};
 
 const nameInput = document.querySelector('.name-form');
 const messageInput = document.querySelector('.insights-form');
-const commentBtn = document.querySelector('#commentBtn');
 
 const displayPokemon = async (card, index) => {
   const etiquetas = [];
@@ -52,6 +51,7 @@ const displayPokemon = async (card, index) => {
   };
   const options = {
     responsive: false,
+    devicePixelRatio: 1,
     maintainAspectRatio: true,
     scale: {
       ticks: {
@@ -75,16 +75,19 @@ const displayPokemon = async (card, index) => {
   // console.log(a);
   displayMessage(a);
   // eslint-disable-next-line no-const-assign
-  commentBtn.addEventListener('click', async () => {
-    await postComment(card[index].data.id, nameInput.value, messageInput.value);
-    // console.log(await postComment(1, 'sadsfdd', 'asfsf'));
-    displayMessage(await getComments(card[index].data.id));
-    // eslint-disable-next-line no-const-assign
-    nameInput.value = '';
-    // eslint-disable-next-line no-const-assign
-    messageInput.value = '';
-    // console.log(a);
-    // console.log(await getComments(1));
+  document.querySelector('form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    // eslint-disable-next-line no-empty
+    if (nameInput.value === '' || messageInput === '') {} else {
+      await postComment(card[index].data.id, nameInput.value, messageInput.value);
+      // console.log(await postComment(1, 'sadsfdd', 'asfsf'));
+      const b = await getComments(card[index].data.id);
+      displayMessage(b);
+      // eslint-disable-next-line no-const-assign
+      nameInput.value = '';
+      // eslint-disable-next-line no-const-assign
+      messageInput.value = '';
+    }
   });
 };
 
