@@ -1,4 +1,5 @@
 import { postComment, getComments } from '../modules/involvementRequests';
+import displayMessage from './displayMessage';
 /* eslint-disable no-new */
 const cardPoke = document.querySelector('.cardModal');
 const $grafica = document.querySelector('#grafica');
@@ -9,7 +10,7 @@ const nameInput = document.querySelector('.name-form');
 const messageInput = document.querySelector('.insights-form');
 const commentBtn = document.querySelector('#commentBtn');
 
-const displayPokemon = (card, index) => {
+const displayPokemon = async (card, index) => {
   const etiquetas = [];
   const datas = [];
   // eslint-disable-next-line no-undef
@@ -70,13 +71,19 @@ const displayPokemon = (card, index) => {
     },
     options,
   });
+  const a = await getComments(card[index].data.id);
+  // console.log(a);
+  displayMessage(a);
   // eslint-disable-next-line no-const-assign
   commentBtn.addEventListener('click', async () => {
-    console.log(await postComment(1, 'nameInput.value', 'messageInput.value'));
-    // const a = await getComments();
+    await postComment(card[index].data.id, nameInput.value, messageInput.value);
+    // console.log(await postComment(1, 'sadsfdd', 'asfsf'));
+    displayMessage(await getComments(card[index].data.id));
+    // eslint-disable-next-line no-const-assign
+    nameInput.value = '';
+    // eslint-disable-next-line no-const-assign
+    messageInput.value = '';
     // console.log(a);
-    nameInput.value = '';
-    nameInput.value = '';
     // console.log(await getComments(1));
   });
 };

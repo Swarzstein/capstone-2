@@ -18,27 +18,27 @@ const getLikes = async () => {
 };
 
 // eslint-disable-next-line camelcase
-const postComment = async (id, userName, comment) => {
-  const apiN = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/dxesV5XBQw7wdwm2FAfB/comments/';
+const postComment = async (id, userName, yourComment) => {
+  const apiN = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/cFV33JHlazRsWqnKALlW/comments/';
   const lead = {
     item_id: id,
     username: userName,
-    comment,
+    comment: yourComment,
   };
-  await fetch(await apiN, {
+  const request = await fetch(await apiN, {
     method: 'POST',
     body: JSON.stringify(lead),
     headers: {
       'Content-type': 'application/json; charset=UTF-8',
     },
-  })
-    .then((response) => response.text())
-    .then((data) => console.log(data + id));
+  });
+  const response = request.status;
+  return response;
 };
 
 const getComments = async (id) => {
-  const request = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/dxesV5XBQw7wdwm2FAfB/comments/${id}`);
-  const response = await request.json();
+  const request = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/cFV33JHlazRsWqnKALlW/comments?item_id=${id}`);
+  const response = request.json();
   return response;
 };
 
