@@ -8,6 +8,7 @@ const nameInput = document.querySelector('.name-form');
 const messageInput = document.querySelector('.insights-form');
 
 const displayPokemon = async (card, index) => {
+  console.log(`imprimiendo poke ${+card[index].data.id}`);
   let nroAbility = 0;
   let datosIngresos = {};
   const etiquetas = [];
