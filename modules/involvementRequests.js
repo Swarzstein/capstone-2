@@ -13,9 +13,13 @@ const giveLike = async (id) => {
 };
 
 const getLikes = async () => {
-  const request = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${keyApi}/likes`);
-  const response = request.json();
-  return response;
+  try {
+    const request = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${keyApi}/likes`);
+    const response = await request.json();
+    return response;
+  } catch (e) {
+    return [];
+  }
 };
 
 const getComments = async (id) => {

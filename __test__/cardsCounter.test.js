@@ -32,4 +32,10 @@ describe('Count items', () => {
     const cardsList = counter();
     expect(cardsList).toEqual(20);
   });
+  test('Counting 0 cards', () => {
+    const cards = '';
+    document.body.innerHTML = cards;
+    const cardsList = counter();
+    expect(cardsList).toEqual(20);
+  });
 });

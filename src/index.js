@@ -2,6 +2,7 @@ import './index.css';
 import displayPokemonList from '../modules/display.js';
 import displayPokemon from './displayPokemon.js';
 import { likeToPokemon } from '../modules/likesManager.js';
+import counter from '../modules/cardsCounter.js';
 
 const modalPopup = document.querySelector('.modalBackground');
 const closeBtn = document.querySelector('.close');
@@ -26,6 +27,7 @@ const displayCards = async () => {
       likeToPokemon(id);
     });
   });
+  document.getElementById('links-p').innerHTML = `<a href="#PokeCard">Pokémons (${counter()})</a>`;
 };
 
 displayCards();

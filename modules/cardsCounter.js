@@ -1,7 +1,5 @@
-let count = 0;
-
-count = 20;
-
-const counter = () => count;
-
+const counter = () => {
+  const count = document.querySelectorAll('.card').length;
+  return count;
+};
 export default counter;

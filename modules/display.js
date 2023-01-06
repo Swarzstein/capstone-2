@@ -1,7 +1,6 @@
 import { getPokemonList, getPokemon } from './datadex.js';
 import { likesList } from './likesManager.js';
-// import displayPokemon from './displayPokemon';
-// import displayMessage from './displayMessage';
+
 let pokemonList = [];
 
 const displayPokemonList = async () => {
