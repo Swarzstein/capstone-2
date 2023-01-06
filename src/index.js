@@ -1,7 +1,7 @@
 import './index.css';
 import displayPokemonList from '../modules/display.js';
 import displayPokemon from './displayPokemon.js';
-import { likeToPokemon } from '../modules/likesManager';
+import { likeToPokemon } from '../modules/likesManager.js';
 
 const modalPopup = document.querySelector('.modalBackground');
 const closeBtn = document.querySelector('.close');
@@ -24,7 +24,6 @@ const displayCards = async () => {
     likeButton.addEventListener('click', (e) => {
       const id = parseInt(e.target.parentNode.id.slice(2), 10);
       likeToPokemon(id);
-      console.log(id);
     });
   });
 };
