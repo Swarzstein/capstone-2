@@ -1,5 +1,5 @@
-const giveLike = (id) => {
-  const request = fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/cFV33JHlazRsWqnKALlW/likes', {
+const giveLike = async (id) => {
+  const request = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/cFV33JHlazRsWqnKALlW/likes', {
     method: 'POST',
     body: JSON.stringify({
       item_id: id,

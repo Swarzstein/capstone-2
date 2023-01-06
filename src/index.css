@@ -2,7 +2,7 @@
 
 body {
   background-image: url('./assets/pokemon.webp');
-  background-size: cover;
+  background-size: 100%;
   margin: 0;
 }
 
@@ -209,4 +209,9 @@ span {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.like-btn {
+  border-style: none;
+  background: none;
 }
