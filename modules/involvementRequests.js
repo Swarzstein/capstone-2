@@ -8,14 +8,14 @@ const giveLike = (id) => {
     headers: {
       'Content-type': 'application/json; charset=UTF-8',
     },
-  })
-    .then((response) => response.json());
+  });
+  return request.status;
 };
 
 const getLikes = async () => {
   const request = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${keyApi}/likes`);
-  const response = await request.json();
-  return response.result;
+  const response = request.json();
+  return response;
 };
 
 const getComments = async (id) => {

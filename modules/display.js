@@ -1,7 +1,9 @@
 import { getPokemonList, getPokemon } from './datadex.js';
+import { likesList } from './likesManager.js';
 // import displayPokemon from './displayPokemon';
 // import displayMessage from './displayMessage';
 let pokemonList = [];
+
 const displayPokemonList = async () => {
   pokemonList = await getPokemonList();
   let pokemonCards = '';
@@ -15,8 +17,16 @@ const displayPokemonList = async () => {
     pokemonCards += `
     <div class="card" id="${n}">
       <img src="${pokemon.data.sprites.other['official-artwork'].front_default}" alt="${pokemon.name}" class="card-img">
-      <div><h3>${name}</h3> </div>
-      <div class="types">${types}</div>
+      <div class="space-between">
+        <div>
+          <h2>${name}</h2>
+          <div class="types">${types}</div>
+        </div>
+        <div>
+          <button class="like-btn" id="lb${pokemon.data.id}"><box-icon name="heart"></box-icon></button>
+          <h3 id="l${pokemon.data.id}">Likes: 0</h3>
+        </div>
+      </div>
       <div class="buttons">
         <button class="popupBtn">Comments</button>
         <button class="hidden">Reserve</button>
@@ -25,6 +35,7 @@ const displayPokemonList = async () => {
     `;
     n += 1;
   }
+  likesList();
   localStorage.setItem('pokemonList', JSON.stringify(pokemonList));
   return pokemonCards;
 };
