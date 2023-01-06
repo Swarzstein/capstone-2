@@ -1,4 +1,4 @@
-import { postComment, getComments } from '../modules/involvementRequests.js';
+import { postComment, getComments } from './involvementRequests.js';
 import displayMessage from './displayMessage.js';
 /* eslint-disable no-new */
 const cardPoke = document.querySelector('.cardModal');
@@ -72,7 +72,6 @@ const displayPokemon = async (card, index) => {
     options,
   });
   const a = await getComments(card[index].data.id);
-  // console.log(a);
   displayMessage(a);
   // eslint-disable-next-line no-const-assign
   document.querySelector('form').addEventListener('submit', async (e) => {
@@ -82,6 +81,8 @@ const displayPokemon = async (card, index) => {
       await postComment(card[index].data.id, nameInput.value, messageInput.value);
       // console.log(await postComment(1, 'sadsfdd', 'asfsf'));
       const b = await getComments(card[index].data.id);
+      // console.log('its:', b);
+      // console.log('its me');
       displayMessage(b);
       // eslint-disable-next-line no-const-assign
       nameInput.value = '';

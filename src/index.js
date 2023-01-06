@@ -1,6 +1,6 @@
 import './index.css';
 import displayPokemonList from '../modules/display.js';
-import displayPokemon from './displayPokemon.js';
+import displayPokemon from '../modules/displayPokemon.js';
 import { likeToPokemon } from '../modules/likesManager.js';
 
 const modalPopup = document.querySelector('.modalBackground');
