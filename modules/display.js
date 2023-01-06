@@ -12,7 +12,6 @@ const displayPokemonList = async () => {
   for (const pokemon of pokemonList) {
     // eslint-disable-next-line no-await-in-loop
     pokemon.data = await getPokemon(pokemon.url);
-    console.log(pokemon.data.id);
     const types = pokemon.data.types.map((types) => `<span class="${types.type.name}">${types.type.name.toUpperCase()}</span>`).join('');
     const name = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1);
     pokemonCards += `

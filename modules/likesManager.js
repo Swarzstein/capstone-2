@@ -8,4 +8,8 @@ const likesList = async () => {
   }
 };
 
-export { likesList };
+const likeToPokemon = () => {
+  giveLike();
+};
+
+export { likesList, likeToPokemon };

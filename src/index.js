@@ -16,14 +16,8 @@ const displayCards = async () => {
       const arrayPokemon = JSON.parse(localStorage.getItem('pokemonList'));
       const index = parseInt(e.target.parentNode.parentNode.id, 10);
       displayPokemon(arrayPokemon[index].data);
-      // displayMessage();
     });
   });
 };
 
 displayCards();
-
-document.querySelector('#commentBtn').addEventListener('click', (index, e) => {
-  e.preventDefault();
-  console.log(123);
-});
