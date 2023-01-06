@@ -1,5 +1,5 @@
-import { postComment, getComments } from '../modules/involvementRequests';
-import displayMessage from './displayMessage';
+import { postComment, getComments } from '../modules/involvementRequests.js';
+import displayMessage from './displayMessage.js';
 /* eslint-disable no-new */
 const cardPoke = document.querySelector('.cardModal');
 const $grafica = document.querySelector('#grafica');
