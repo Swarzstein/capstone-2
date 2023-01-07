@@ -4,10 +4,10 @@ import displayPokemon from '../modules/displayPokemon.js';
 import { likeToPokemon } from '../modules/likesManager.js';
 import { getComments, postComment } from '../modules/involvementRequests.js';
 import displayMessage from '../modules/displayMessage.js';
+import counter from '../modules/cardsCounter.js';
 
 const nameInput = document.querySelector('.name-form');
 const messageInput = document.querySelector('.insights-form');
-
 const modalPopup = document.querySelector('.modalBackground');
 const closeBtn = document.querySelector('.close');
 
@@ -46,6 +46,7 @@ const displayCards = async () => {
       likeToPokemon(id);
     });
   });
+  document.getElementById('links-p').innerHTML = `<a href="#PokeCard">Pokémons (${counter()})</a>`;
 };
 
 displayCards();
