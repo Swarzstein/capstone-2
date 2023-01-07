@@ -1,11 +1,8 @@
-import { postComment, getComments } from '../modules/involvementRequests.js';
+import { getComments } from './involvementRequests.js';
 import displayMessage from './displayMessage.js';
 /* eslint-disable no-new */
 const cardPoke = document.querySelector('.cardModal');
 const $grafica = document.querySelector('#grafica');
-
-const nameInput = document.querySelector('.name-form');
-const messageInput = document.querySelector('.insights-form');
 
 const displayPokemon = async (card, index) => {
   let nroAbility = 0;
@@ -71,24 +68,9 @@ const displayPokemon = async (card, index) => {
     },
     options,
   });
+
   const a = await getComments(card[index].data.id);
-  // console.log(a);
   displayMessage(a);
-  // eslint-disable-next-line no-const-assign
-  document.querySelector('form').addEventListener('submit', async (e) => {
-    e.preventDefault();
-    // eslint-disable-next-line no-empty
-    if (nameInput.value === '' || messageInput === '') {} else {
-      await postComment(card[index].data.id, nameInput.value, messageInput.value);
-      // console.log(await postComment(1, 'sadsfdd', 'asfsf'));
-      const b = await getComments(card[index].data.id);
-      displayMessage(b);
-      // eslint-disable-next-line no-const-assign
-      nameInput.value = '';
-      // eslint-disable-next-line no-const-assign
-      messageInput.value = '';
-    }
-  });
 };
 
 export default displayPokemon;

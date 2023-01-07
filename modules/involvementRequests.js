@@ -25,9 +25,7 @@ const getLikes = async () => {
 const getComments = async (id) => {
   const request = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${keyApi}/comments?item_id=${id}`);
   const response = await request.json();
-  if (response.status !== 400) {
-    return response;
-  } return [];
+  return response;
 };
 
 // eslint-disable-next-line camelcase
