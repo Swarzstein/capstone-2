@@ -1,11 +1,10 @@
-import { postComment, getComments } from './involvementRequests.js';
+import { getComments } from './involvementRequests.js';
 import displayMessage from './displayMessage.js';
 /* eslint-disable no-new */
 const cardPoke = document.querySelector('.cardModal');
 const $grafica = document.querySelector('#grafica');
 
 const displayPokemon = async (card, index) => {
-  console.log(`imprimiendo poke ${+card[index].data.id}`);
   let nroAbility = 0;
   let datosIngresos = {};
   const etiquetas = [];
@@ -70,9 +69,7 @@ const displayPokemon = async (card, index) => {
     options,
   });
 
-  console.log('obteniendo comentarios');
   const a = await getComments(card[index].data.id);
-  console.log(`estos son los comentarios de ${card[index].data.id}:\n${JSON.stringify(a)}`);
   displayMessage(a);
 };
 

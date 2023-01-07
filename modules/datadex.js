@@ -1,5 +1,5 @@
 const getPokemonList = async () => {
-  const request = await fetch('https://pokeapi.co/api/v2/pokemon?limit=20&offset=300');
+  const request = await fetch('https://pokeapi.co/api/v2/pokemon?limit=20&offset=250');
   const response = await request.json();
   return response.results;
 };

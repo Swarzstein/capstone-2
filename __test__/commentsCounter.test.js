@@ -22,7 +22,6 @@ describe('Count Comments', () => {
     }
     document.body.innerHTML = comments;
     const result = countMessages();
-    console.log(result);
     expect(result).toEqual(6);
   });
   test('Count one Comments', () => {
