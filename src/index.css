@@ -110,37 +110,50 @@ span {
 
 .cardModal {
   display: flex;
-  flex-direction: column;
   align-items: center;
   margin-left: 2rem;
-  height: 40%;
+  width: 50%;
 }
 
 .cardModal img {
-  height: 15rem;
+  width: 50%;
 }
 
 .commentsTotal {
+  display:flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#comments-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.comments {
   margin-top: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   border: solid wheat;
   overflow-y: scroll;
-  width: 90%;
-  box-shadow: 8px 10px 10px 1px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  box-shadow: 8px 10px 10px 1px rgb(0 0 0 / 50%);
   min-height: 0;
   max-height: 170px;
+  margin-left: 3rem;
 }
 
-.commentsTotal::-webkit-scrollbar-thumb {
+.comments::-webkit-scrollbar-thumb {
   background-color: #797979;
   border-radius: 10px;
   border: 2px solid #f1f2f3;
   width: 4rem;
 }
 
-.commentsTotal::-webkit-scrollbar:vertical {
+.comments::-webkit-scrollbar:vertical {
   width: 4rem;
 }
 
@@ -169,7 +182,7 @@ span {
 }
 
 #grafica {
-  width: 40rem;
+  width: 60%;
   padding: 0;
   margin-top: 2rem;
 }
@@ -177,16 +190,14 @@ span {
 .cardTotal {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-around;
 }
 
 .form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin-top: 600px;
-  position: absolute;
+  width: 50%;
 }
 
 .modal {
@@ -196,11 +207,10 @@ span {
   box-shadow: 8px 10px 10px 1px rgb(0 0 0 / 50%);
   margin: 0 auto;
   margin-top: 1%;
-  height: 90vh;
+  height: 95vh;
   width: 80vw;
   margin-left: 7%;
   background-color: #fff;
-  position: fixed;
   flex-direction: column;
   align-content: center;
   align-items: center;
@@ -211,6 +221,7 @@ span {
   height: 100vh;
   position: fixed;
   background-color: #000d;
+  z-index: 1;
 }
 
 .close {

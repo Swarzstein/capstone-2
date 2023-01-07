@@ -7,6 +7,40 @@
   <title>PokeCard</title>
 </head>
 <body>
+  <div class="modalBackground hidden">
+    <div class="modal">
+      <section class="cardTotal">
+        <div class="cardModal"></div>
+        <canvas id="grafica"></canvas>
+        <button class="close">X</button>
+      </section>
+      <section class="commentsTotal">
+        <div id="comments-container">
+          <div class="messagesAndCount">
+            <h2>Comments </h2>
+            <div class= "messageCount"></div>
+          </div>
+          <div class="comments"></div>
+        </div>
+        <div class="form">
+          <form action="submit">
+            <ul class="ul-form">
+              <input class="name-form"
+              type="text"
+              placeholder="Your name"
+              required>
+              <input class="insights-form"
+              type="text"
+              placeholder="Your insights"
+              required >
+              <button type="submit" class="commentBtn" id="commentBtn">Comment</button>
+          </ul>
+        </form>
+       </div>    
+      </section>
+    </div>
+  
+  </div>
   <header>
     <nav>
       <img class="logo" src="https://www.freepnglogos.com/uploads/pokemon-symbol-logo-png-31.png" alt="pokemon symbol logo png" />
@@ -16,51 +50,10 @@
           <li class="links" id="links-c"><a href="#Competitions">Competitions</a></li></ul>
     </nav>
   </header>
-  <div class="modalBackground hidden">
-    <div class="modal">
-      <section class="cardTotal">
-        <div class="cardModal"></div>
-        <canvas id="grafica"></canvas>
-        <button class="close">X</button>
-      </section>
-      <div class="messagesAndCount">
-        <h2>Messages </h2>
-        <div class= "messageCount"></div>
-      </div>
-      <section class="commentsTotal">
-        <div class="comments"></div>
-      </section>
-      <section class="form">
-        <form action="submit">
-          <ul class="ul-form">
-            <input class="name-form"
-            type="text"
-            placeholder="Your name"
-            required>
-            <input class="insights-form"
-            type="text"
-            placeholder="Your insights"
-            required >
-            <button type="submit" class="commentBtn" id="commentBtn">Comment</button>
-        </ul>
-      </form>
-     </section>    
-    </div>
-  
-  </div>
 
   <main>
     <div id="cards-count"></div>
     <section id="pokemon-list">
-      <div class="card hidden" id="1">
-        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png" alt="bulbasaur" class="card-img">
-        <h3>Bulbasaur</h3>
-        <div class="types"><span>Type 1</span> <span>Type 2</span></div>
-        <div class="buttons">
-          <button>Comments</button>
-          <button>Reserve</button>
-        </div>   
-      </div>
     </section>
   </main>
   <footer>

@@ -10,19 +10,21 @@ const displayPokemon = async (card, index) => {
   const etiquetas = [];
   const datas = [];
   // eslint-disable-next-line no-undef
-  cardPoke.innerHTML = '';
-  cardPoke.innerHTML += `
+  let pokeinfo = '';
+  pokeinfo += `
     
     <img src="${card[index].data.sprites.other['official-artwork'].front_default}" alt="pokemon">
+    <div id="info">
     <h2>${card[index].data.name.toUpperCase()}</h2>
     `;
   // eslint-disable-next-line no-restricted-syntax
   for (const abilityOne of card[index].data.abilities) {
-    cardPoke.innerHTML += `
-        <p>Ability Nro ${nroAbility + 1}:  ${abilityOne.ability.name}</p>`;
+    pokeinfo += `
+        <p>Ability ${nroAbility + 1}:  ${abilityOne.ability.name}</p>`;
     // eslint-disable-next-line no-new, no-undef
     nroAbility += 1;
   }
+  cardPoke.innerHTML = `${pokeinfo}</div>`;
   // eslint-disable-next-line no-restricted-syntax
   for (const pokemonStat of card[index].data.stats) {
     etiquetas.push(pokemonStat.stat.name);
