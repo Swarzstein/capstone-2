@@ -36,6 +36,6 @@ describe('Count items', () => {
     const cards = '';
     document.body.innerHTML = cards;
     const cardsList = counter();
-    expect(cardsList).toEqual(20);
+    expect(cardsList).toEqual(0);
   });
 });
