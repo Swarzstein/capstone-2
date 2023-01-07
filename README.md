@@ -63,6 +63,7 @@ After you're finished please remove all the comments and instructions!
 
 - HTML, CSS and JavaScript
 - Git, Github and Visual Studio Code
+- Api's
 
 <!-- Features -->
 
