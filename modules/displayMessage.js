@@ -1,20 +1,24 @@
 import commentsCounter from './commentsCounter.js';
-// eslint-disable-next-line no-undef
+
 const commentsPoke = document.querySelector('.comments');
 const value = document.querySelector('.messageCount');
 const displayMessage = (array2) => {
   let str = '';
-  // eslint-disable-next-line no-restricted-syntax, no-undef
+  let count = 0;
   try {
-    // eslint-disable-next-line no-restricted-syntax
-    for (const comment of array2) {
+    array2.array.forEach((comment) => {
+      let backgroundColor = '';
+      if (count % 2 === 0) {
+        backgroundColor = 'white';
+      } else {
+        backgroundColor = 'gray';
+      }
       str += `
-      <div class = "comentsByPokemon"><p>${comment.creation_date} ${comment.username}:  ${comment.comment}</p></div>
+      <div class = "comentsByPokemon ${backgroundColor}" id=${count}><p>${comment.creation_date} ${comment.username}:  ${comment.comment}</p></div>
       `;
-    }
-  // eslint-disable-next-line no-empty
+      count += 1;
+    });
   } catch (error) {
-    // eslint-disable-next-line no-template-curly-in-string
     str = '';
   }
   commentsPoke.innerHTML = str;

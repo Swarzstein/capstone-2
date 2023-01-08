@@ -8,9 +8,6 @@ Modify this file to match your project and remove sections that don't apply.
 
 REQUIRED SECTIONS:
 - Table of Contents
-- About the Project
-  - Built With
-  - Live Demo
 - Getting Started
 - Authors
 - Future Features
@@ -24,11 +21,6 @@ After you're finished please remove all the comments and instructions!
 
 <div align="center">
 
-  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
-  <br/>
-
-  <h3><b>Microverse README Template</b></h3>
-
 </div>
 
 <!-- TABLE OF CONTENTS -->
@@ -38,7 +30,6 @@ After you're finished please remove all the comments and instructions!
 - [📖 About the Project](#about-project)
   - [🛠 Built With](#built-with)
     - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -57,7 +48,7 @@ After you're finished please remove all the comments and instructions!
 
 # 📖 [toDoList] <a name="about-project"></a>
 
-**[toDoList]** is a website that allows you to check pokemons and comment abou it!.
+**[PokeCard]** is a website that allows you to check pokemons and comment abou it!.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -72,14 +63,6 @@ After you're finished please remove all the comments and instructions!
 - **[select_pokemon]**
 - **[consume_api]**
 - **[get_api]**
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LIVE DEMO -->
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-[You can see our live demo](https://github.com/Swarzstein/capstone-2/dist)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

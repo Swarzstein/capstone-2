@@ -28,7 +28,6 @@ const getComments = async (id) => {
   return response;
 };
 
-// eslint-disable-next-line camelcase
 const postComment = async (id, userName, yourComment) => {
   const apiN = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${keyApi}/comments/`;
   const lead = {
