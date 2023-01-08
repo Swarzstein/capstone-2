@@ -7,9 +7,7 @@ const displayPokemonList = async () => {
   pokemonList = await getPokemonList();
   let pokemonCards = '';
   let n = 0;
-  // eslint-disable-next-line no-restricted-syntax
-  for (const pokemon of pokemonList) {
-    // eslint-disable-next-line no-await-in-loop
+  pokemonList.array.forEach(async (pokemon) => {
     pokemon.data = await getPokemon(pokemon.url);
     const types = pokemon.data.types.map((types) => `<span class="${types.type.name}">${types.type.name.toUpperCase()}</span>`).join('');
     const name = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1);
@@ -33,7 +31,7 @@ const displayPokemonList = async () => {
     </div>
     `;
     n += 1;
-  }
+  });
   likesList();
   localStorage.setItem('pokemonList', JSON.stringify(pokemonList));
   return pokemonCards;
