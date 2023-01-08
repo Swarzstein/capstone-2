@@ -24,7 +24,6 @@ const displayPokemon = async (card, index) => {
     nroAbility += 1;
   });
   cardPoke.innerHTML = `${pokeinfo}</div>`;
-  // eslint-disable-next-line no-restricted-syntax
   const cardStat = card[index].data.stats;
   cardStat.forEach((pokemonStat) => {
     etiquetas.push(pokemonStat.stat.name);

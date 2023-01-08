@@ -6,8 +6,7 @@ import countMessages from '../modules/commentsCounter.js';
 describe('Count Comments', () => {
   test('Count four Comments', () => {
     let comments = '';
-    // eslint-disable-next-line no-plusplus
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < 4; i + 1) {
       comments += '<div class= "comentsByPokemon"></div>';
     }
     document.body.innerHTML = comments;
@@ -16,8 +15,7 @@ describe('Count Comments', () => {
   });
   test('Count six Comments', () => {
     let comments = '';
-    // eslint-disable-next-line no-plusplus
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < 6; i + 1) {
       comments += '<div class= "comentsByPokemon"></div>';
     }
     document.body.innerHTML = comments;
@@ -26,8 +24,7 @@ describe('Count Comments', () => {
   });
   test('Count one Comments', () => {
     let comments = '';
-    // eslint-disable-next-line no-plusplus
-    for (let i = 0; i < 1; i++) {
+    for (let i = 0; i < 1; i + 1) {
       comments += '<div class= "comentsByPokemon"></div>';
     }
     document.body.innerHTML = comments;
@@ -36,7 +33,6 @@ describe('Count Comments', () => {
   });
   test('Count zero Comments', () => {
     const comments = '';
-    // eslint-disable-next-line no-plusplus
     document.body.innerHTML = comments;
     const result = countMessages();
     expect(result).toEqual(0);

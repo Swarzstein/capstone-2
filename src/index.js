@@ -19,7 +19,6 @@ document.querySelector('form').addEventListener('submit', async (e) => {
   e.preventDefault();
   const card = JSON.parse(localStorage.getItem('pokemonList'));
   const index = parseInt(e.target.parentNode.id, 10);
-  // eslint-disable-next-line no-empty
   await postComment(card[index].data.id, nameInput.value, messageInput.value);
   const b = await getComments(card[index].data.id);
   displayMessage(b);
