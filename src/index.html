@@ -5,14 +5,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PokeCard</title>
+  <script src="https://kit.fontawesome.com/7222a8b277.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <div class="modalBackground hidden">
     <div class="modal">
       <section class="cardTotal">
+        <button class="close"><i class="fa-solid fa-x"></i></button>
         <div class="cardModal"></div>
-        <canvas id="grafica"></canvas>
-        <button class="close">X</button>
+         <canvas id="grafica"></canvas>
       </section>
       <section class="commentsTotal">
         <div id="comments-container">
@@ -26,7 +27,7 @@
           <form action="submit">
             <ul class="ul-form">
               <input class="name-form"
-              type="text"
+              type="texttarea"
               placeholder="Your name"
               required>
               <input class="insights-form"

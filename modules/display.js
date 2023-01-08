@@ -17,12 +17,12 @@ const displayPokemonList = async () => {
     <div class="card" id="${n}">
       <img src="${pokemon.data.sprites.other['official-artwork'].front_default}" alt="${pokemon.name}" class="card-img">
       <div class="space-between">
-        <div>
+        <div class="nameType">
           <h2>${name}</h2>
           <div class="types">${types}</div>
         </div>
-        <div>
-          <button class="like-btn" id="lb${pokemon.data.id}"><box-icon name="heart"></box-icon></button>
+        <div class="likesT">
+          <button class="like-btn" id="lb${pokemon.data.id}"><i class="fa-regular fa-heart"></i></button>
           <h3 id="l${pokemon.data.id}">Likes: 0</h3>
         </div>
       </div>

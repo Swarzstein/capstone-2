@@ -23,9 +23,7 @@ document.querySelector('form').addEventListener('submit', async (e) => {
   await postComment(card[index].data.id, nameInput.value, messageInput.value);
   const b = await getComments(card[index].data.id);
   displayMessage(b);
-  // eslint-disable-next-line no-const-assign
   nameInput.value = '';
-  // eslint-disable-next-line no-const-assign
   messageInput.value = '';
 });
 

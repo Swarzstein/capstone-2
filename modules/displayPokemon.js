@@ -1,6 +1,6 @@
 import { getComments } from './involvementRequests.js';
 import displayMessage from './displayMessage.js';
-/* eslint-disable no-new */
+
 const cardPoke = document.querySelector('.cardModal');
 const $grafica = document.querySelector('#grafica');
 
@@ -9,27 +9,27 @@ const displayPokemon = async (card, index) => {
   let datosIngresos = {};
   const etiquetas = [];
   const datas = [];
-  // eslint-disable-next-line no-undef
   let pokeinfo = '';
   pokeinfo += `
-    
-    <img src="${card[index].data.sprites.other['official-artwork'].front_default}" alt="pokemon">
+    <div class="pokeImg">
+      <img src="${card[index].data.sprites.other['official-artwork'].front_default}" alt="pokemon">
+    </div>
     <div id="info">
     <h2>${card[index].data.name.toUpperCase()}</h2>
     `;
-  // eslint-disable-next-line no-restricted-syntax
-  for (const abilityOne of card[index].data.abilities) {
+  const datAbility = card[index].data.abilities;
+  datAbility.forEach((abilityOne) => {
     pokeinfo += `
         <p>Ability ${nroAbility + 1}:  ${abilityOne.ability.name}</p>`;
-    // eslint-disable-next-line no-new, no-undef
     nroAbility += 1;
-  }
+  });
   cardPoke.innerHTML = `${pokeinfo}</div>`;
   // eslint-disable-next-line no-restricted-syntax
-  for (const pokemonStat of card[index].data.stats) {
+  const cardStat = card[index].data.stats;
+  cardStat.forEach((pokemonStat) => {
     etiquetas.push(pokemonStat.stat.name);
     datas.push(pokemonStat.base_stat);
-  }
+  });
   datosIngresos = {
     label: 'Stats',
     data: datas,
