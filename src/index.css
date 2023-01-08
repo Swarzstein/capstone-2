@@ -32,15 +32,19 @@ nav {
   font-size: 1rem;
   gap: 2rem;
 }
+
 p {
   font-size: 1.4rem;
 }
+
 h2 {
   font-size: 2rem;
-} 
+}
+
 h1 {
   font-size: 3rem;
 }
+
 a {
   font-size: 2rem;
 }
@@ -169,6 +173,7 @@ span {
   min-height: 0;
   max-height: 170px;
 }
+
 .comments p {
   width: 57vw;
 }
@@ -248,11 +253,13 @@ span {
   overflow-y: scroll;
   position: relative;
 }
+
 .modal::-webkit-scrollbar {
-display: none;
+  display: none;
 }
-.pokeImg{
-  display: flex; 
+
+.pokeImg {
+  display: flex;
 }
 
 .modalBackground {
@@ -277,6 +284,7 @@ display: none;
   flex-direction: column;
   gap: 1rem;
 }
+
 .space-between h2 {
   margin: 0.5rem;
 }
@@ -301,20 +309,17 @@ display: none;
   padding-bottom: 0;
 }
 
-.messagesAndCount h2,
-div,
-p {
-  margin: 0;
-}
 #info {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 6rem;
 }
+
 #info h2 {
   font-size: 3rem;
 }
+
 .types {
   display: flex;
   flex-direction: row;
@@ -324,6 +329,7 @@ p {
 .white {
   background-color: #fff;
 }
+
 .gray {
   background-color: #eee;
 }
