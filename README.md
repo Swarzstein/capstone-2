@@ -24,11 +24,6 @@ After you're finished please remove all the comments and instructions!
 
 <div align="center">
 
-  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
-  <br/>
-
-  <h3><b>Microverse README Template</b></h3>
-
 </div>
 
 <!-- TABLE OF CONTENTS -->
@@ -57,7 +52,7 @@ After you're finished please remove all the comments and instructions!
 
 # 📖 [toDoList] <a name="about-project"></a>
 
-**[toDoList]** is a website that allows you to check pokemons and comment abou it!.
+**[PokeCard]** is a website that allows you to check pokemons and comment abou it!.
 
 ## 🛠 Built With <a name="built-with"></a>
 
