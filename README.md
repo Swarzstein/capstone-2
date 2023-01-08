@@ -33,7 +33,6 @@ After you're finished please remove all the comments and instructions!
 - [📖 About the Project](#about-project)
   - [🛠 Built With](#built-with)
     - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -67,14 +66,6 @@ After you're finished please remove all the comments and instructions!
 - **[select_pokemon]**
 - **[consume_api]**
 - **[get_api]**
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LIVE DEMO -->
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-[You can see our live demo](https://github.com/Swarzstein/capstone-2/dist)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
