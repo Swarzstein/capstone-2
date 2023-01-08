@@ -59,7 +59,7 @@ const displayPokemon = async (card, index) => {
     },
   };
   // eslint-disable-next-line no-new, no-undef
-  new Chart($grafica, {
+  new Chart($grafica, { // this only work with this
     type: 'radar', // Tipo de gráfica. Puede ser dougnhut o pie
     data: {
       labels: etiquetas,
