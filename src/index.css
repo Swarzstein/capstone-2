@@ -1,0 +1,335 @@
+@import url('https://fonts.cdnfonts.com/css/pokemon-solid');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-image: url('./assets/pokemon.webp');
+  background-size: 100%;
+  margin: 0;
+}
+
+header {
+  position: sticky;
+  background-color: #fff;
+  top: 0;
+}
+
+nav {
+  font-family: 'Pokemon Solid', sans-serif;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 3rem;
+  height: 6rem;
+  font-size: 1rem;
+  gap: 2rem;
+}
+
+p {
+  font-size: 1.4rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+a {
+  font-size: 2rem;
+}
+
+.nav-menu-ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.nav-menu-ul a {
+  text-decoration: none;
+  color: #ed1b24;
+  letter-spacing: 2.5px;
+}
+
+.logo {
+  height: 4rem;
+  width: 4rem;
+}
+
+main {
+  padding: 5%;
+}
+
+.buttons {
+  display: flex;
+  padding: 5% 0;
+  justify-content: center;
+  gap: 5%;
+}
+
+.buttons button {
+  min-width: 60%;
+  height: 5vh;
+  border-radius: 5px;
+}
+
+footer {
+  padding: 2%;
+  background-color: #fff;
+}
+
+.grass {
+  background-color: #6a6;
+}
+
+span {
+  border: 1px solid #000;
+  border-radius: 0.5em;
+  padding: 2px 4px;
+}
+
+.card {
+  width: 42vw;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-radius: 1em;
+  border: 1px solid #eee;
+  background-color: #eee;
+}
+
+.card-img {
+  display: flex;
+  justify-content: center;
+  width: 25vw;
+  margin: 0 auto;
+}
+
+.poke-image {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.hidden {
+  display: none;
+}
+
+#pokemon-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.cardModal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80vw;
+  height: 80vh;
+}
+
+.cardModal img {
+  width: 70vw;
+  height: 70vh;
+}
+
+.commentsTotal {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 80%;
+}
+
+#comments-container {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.comments {
+  padding: 1rem 1rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: solid wheat;
+  overflow-y: scroll;
+  width: 100%;
+  box-shadow: 8px 10px 10px 1px rgb(0 0 0 / 50%);
+  min-height: 0;
+  max-height: 170px;
+}
+
+.comments p {
+  width: 57vw;
+}
+
+.comments::-webkit-scrollbar-thumb {
+  background-color: #797979;
+  border-radius: 10px;
+  border: 2px solid #f1f2f3;
+  width: 4rem;
+}
+
+.comments::-webkit-scrollbar:vertical {
+  width: 4rem;
+}
+
+.ul-form {
+  display: flex;
+  flex-direction: column;
+  width: 10vh;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.ul-form input {
+  border: solid black;
+  width: fit-content;
+}
+
+.commentBtn {
+  border: solid black;
+  color: white;
+  background-color: red;
+  height: 3.1rem;
+  padding: 4px 5px 5px 5px;
+  width: max-content;
+  font-size: 2rem;
+  box-sizing: border-box;
+  box-shadow: 8px 10px 10px 1px rgba(0, 0, 0, 0.5);
+}
+
+#grafica {
+  margin-top: 1rem;
+  width: 100vw;
+  padding: 0;
+}
+
+.cardTotal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  margin-bottom: 3rem;
+}
+
+.modal {
+  display: flex;
+  gap: 1rem;
+  border: solid wheat 3px;
+  box-shadow: 8px 10px 10px 1px rgb(0 0 0 / 50%);
+  margin: 0 auto;
+  margin-top: 1%;
+  height: 95vh;
+  width: 80vw;
+  margin-left: 7%;
+  background-color: #fff;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  overflow-y: scroll;
+  position: relative;
+}
+
+.modal::-webkit-scrollbar {
+  display: none;
+}
+
+.pokeImg {
+  display: flex;
+}
+
+.modalBackground {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: #000d;
+  z-index: 1;
+}
+
+.close {
+  background: none;
+  border-style: none;
+  margin-right: -75vw;
+}
+
+.space-between {
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.space-between h2 {
+  margin: 0.5rem;
+}
+
+.like-btn {
+  border-style: none;
+  background: none;
+}
+
+.likesT {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.messagesAndCount {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+#info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 6rem;
+}
+
+#info h2 {
+  font-size: 3rem;
+}
+
+.types {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.white {
+  background-color: #fff;
+}
+
+.gray {
+  background-color: #eee;
+}
