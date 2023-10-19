@@ -7,8 +7,7 @@ const $grafica = document.querySelector('#grafica');
 const displayPokemon = async (card, index) => {
   let nroAbility = 0;
   let datosIngresos = {};
-  const etiquetas = [];
-  const datas = [];
+  const etiquetas = ['HP', 'Attack', 'Defense', 'Speed', 'Special Defence', 'Special Attack'];
   let pokeinfo = '';
   pokeinfo += `
     <div class="pokeImg">
@@ -25,13 +24,20 @@ const displayPokemon = async (card, index) => {
   });
   cardPoke.innerHTML = `${pokeinfo}</div>`;
   const cardStat = card[index].data.stats;
+  let pokemon = {};
   cardStat.forEach((pokemonStat) => {
-    etiquetas.push(pokemonStat.stat.name);
-    datas.push(pokemonStat.base_stat);
+    // etiquetas.push(pokemonStat.stat.name);
+    // datas.push(pokemonStat.base_stat);
+    const { name } = pokemonStat.stat;
+    const stat = pokemonStat.base_stat;
+    pokemon = {
+      ...pokemon,
+      [name]: stat,
+    };
   });
   datosIngresos = {
     label: 'Stats',
-    data: datas,
+    data: [pokemon.hp, pokemon.attack, pokemon.defense, pokemon.speed, pokemon['special-defense'], pokemon['special-attack']],
     order: 1,
     backgroundColor: [
       'rgba(163,221,203,0.2)',
@@ -48,7 +54,7 @@ const displayPokemon = async (card, index) => {
     borderWidth: 3, // Ancho del borde
   };
   const options = {
-    responsive: false,
+    responsive: true,
     devicePixelRatio: 1,
     maintainAspectRatio: true,
     scale: {

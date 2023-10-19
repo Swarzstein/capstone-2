@@ -2,7 +2,7 @@ import { getLikes, giveLike } from './involvementRequests.js';
 
 const likesList = async () => {
   const likesList = await getLikes();
-  likesList.array.forEach((like) => {
+  likesList.forEach((like) => {
     const likesElement = document.getElementById(`l${like.item_id}`);
     if (likesElement !== null) {
       document.getElementById(`l${like.item_id}`).innerHTML = `Likes: ${like.likes}`;

@@ -27,7 +27,9 @@ document.querySelector('form').addEventListener('submit', async (e) => {
 });
 
 const displayCards = async () => {
-  document.querySelector('#pokemon-list').innerHTML = await displayPokemonList();
+  const pokemonList = await displayPokemonList();
+  console.log(pokemonList);
+  document.querySelector('#pokemon-list').innerHTML = pokemonList;
   document.querySelectorAll('.popupBtn').forEach((item) => {
     item.addEventListener('click', (e) => {
       modalPopup.classList.toggle('hidden');

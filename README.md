@@ -46,9 +46,9 @@ After you're finished please remove all the comments and instructions!
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [toDoList] <a name="about-project"></a>
+# 📖 [PokeCard] <a name="about-project"></a>
 
-**[PokeCard]** is a website that allows you to check pokemons and comment abou it!.
+**[PokeCard]** is a website that allows you to check pokemons and comment about it!.
 
 ## 🛠 Built With <a name="built-with"></a>
 

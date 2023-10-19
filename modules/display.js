@@ -7,11 +7,13 @@ const displayPokemonList = async () => {
   pokemonList = await getPokemonList();
   let pokemonCards = '';
   let n = 0;
-  pokemonList.array.forEach(async (pokemon) => {
+  // console.log(pokemonList);
+  // console.log(pokemonCards);
+  const pokecards = pokemonList.map(async (pokemon) => {
     pokemon.data = await getPokemon(pokemon.url);
     const types = pokemon.data.types.map((types) => `<span class="${types.type.name}">${types.type.name.toUpperCase()}</span>`).join('');
     const name = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1);
-    pokemonCards += `
+    const pokeCard = `
     <div class="card" id="${n}">
       <img src="${pokemon.data.sprites.other['official-artwork'].front_default}" alt="${pokemon.name}" class="card-img">
       <div class="space-between">
@@ -25,13 +27,16 @@ const displayPokemonList = async () => {
         </div>
       </div>
       <div class="buttons">
-        <button class="popupBtn">Comments</button>
+        <button class="popupBtn">Info</button>
         <button class="hidden">Reserve</button>
       </div>
     </div>
     `;
     n += 1;
+    return pokeCard;
   });
+  const pokeCards = await Promise.all(pokecards);
+  pokemonCards = pokeCards.join('');
   likesList();
   localStorage.setItem('pokemonList', JSON.stringify(pokemonList));
   return pokemonCards;
